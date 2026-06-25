@@ -1,0 +1,70 @@
+# 📈 The Forex Trading Playbook
+
+A complete, beginner-to-competent guide to trading the foreign exchange (forex/FX) market — written for someone starting **from absolute scratch**.
+
+> ⚠️ **Reality check before you read another word.** Forex trading is hard. The majority of retail traders **lose money** — regulated brokers are legally required to disclose this, and the figure is typically **70–85% of accounts losing**. This playbook will not make you rich quickly. It will give you the knowledge, structure, and discipline to give yourself a *real* chance. Treat trading like a skilled profession, not a lottery ticket. Never trade money you cannot afford to lose.
+
+---
+
+## How to use this playbook
+
+Read it **in order** the first time. Each section builds on the last. Then keep it as a reference.
+
+| # | Section | What you'll learn |
+|---|---------|-------------------|
+| 1 | [Foundations](docs/01-foundations.md) | What forex is, who trades it, how the market actually works |
+| 2 | [Terminology & Glossary](docs/02-terminology.md) | **Every term you need** — pips, lots, leverage, spread, margin, and 100+ more |
+| 3 | [Market Mechanics](docs/03-market-mechanics.md) | Pairs, quotes, orders, sessions, the cost of trading |
+| 4 | [Analysis](docs/04-analysis.md) | Fundamental + technical analysis, indicators, chart reading |
+| 5 | [Risk Management](docs/05-risk-management.md) | **The most important section.** Position sizing, stop losses, R-multiples |
+| 6 | [Strategies & Trading Styles](docs/06-strategies.md) | Scalping, day trading, swing, position; concrete example setups |
+| 7 | [Psychology](docs/07-psychology.md) | The mental game that decides who survives |
+| 8 | [Getting Started — Step by Step](docs/08-getting-started.md) | Your exact roadmap from zero to live trading |
+| — | [Trading Plan Template](templates/trading-plan.md) | Fill-in-the-blank plan you actually trade from |
+| — | [Trading Journal Template](templates/trading-journal.md) | Track every trade so you can improve |
+
+---
+
+## The 10-second summary (if you read nothing else)
+
+1. **Forex** = trading one currency against another (e.g. EUR/USD). You profit if your view on the exchange rate is right.
+2. The market trades **~$7.5 trillion per day**, 24 hours a day, 5 days a week.
+3. You access it through a **broker** that gives you **leverage** (borrowed buying power). Leverage magnifies *both* gains and losses.
+4. **Risk management is everything.** Risk a tiny fixed % per trade (≤1%). One bad trade should never hurt.
+5. **Edge + discipline + survival > prediction.** You don't need to be right often; you need wins bigger than losses and the discipline to keep doing it.
+6. Spend months on a **demo account** before risking real money. Then start tiny.
+
+---
+
+## The 6-month learning roadmap
+
+```
+Month 1   → Learn the language. Read this whole playbook. Open a DEMO account.
+Month 2   → Pick ONE strategy. Define your trading plan. Paper trade it.
+Month 3   → Keep demo trading. Journal every trade. Review weekly.
+Month 4   → Go live with a MICRO account & money you can lose. Risk 0.5% per trade.
+Month 5   → Refine. Cut what doesn't work. Double down on what does.
+Month 6+  → Scale slowly only after a proven, journaled track record.
+```
+
+There is no shortcut that skips these months. People who skip them fund the people who don't.
+
+---
+
+## ⚠️ Avoid the scams
+
+The forex world is full of predators. Be deeply skeptical of:
+- "Signal sellers" and Telegram/Discord groups promising guaranteed profits
+- "Forex mentors" flexing rented Lamborghinis on Instagram
+- Anyone offering "managed accounts" with guaranteed returns (often Ponzi schemes)
+- Unregulated brokers (always verify regulation — see [Getting Started](docs/08-getting-started.md))
+- "Robots/EAs" sold as get-rich-automatically machines
+- Anything with the words *guaranteed*, *risk-free*, or *secret*
+
+If it sounds too good to be true in trading, it is — every single time.
+
+---
+
+## License & disclaimer
+
+This is **educational material only**. It is **not financial advice**, not a recommendation to trade, and not a guarantee of any outcome. Trading carries a high risk of losing money. You are solely responsible for your decisions. Consult a licensed financial professional regarding your personal situation. Released under the MIT License — see [LICENSE](LICENSE).
