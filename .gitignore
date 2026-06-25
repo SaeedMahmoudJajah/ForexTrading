@@ -1,0 +1,6 @@
+# Intermediate build artifact (the PDF in dist/ is committed, the HTML is not)
+dist/playbook.html
+
+# OS / editor noise
+.DS_Store
+*.swp
