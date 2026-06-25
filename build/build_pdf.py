@@ -161,6 +161,23 @@ VOLUMES = [
             ("vol-8-market-deep-dive/09-pair-reference-cards.md",          "Appendix", "Pair Reference Cards"),
         ],
     },
+    {
+        "volume": "Volume 9 — Mastering EUR/USD",
+        "subtitle": "The Complete Single-Pair Playbook",
+        "output": "Forex-Trading-Playbook-Vol-9.pdf",
+        "intro": "vol-9-eurusd-mastery/README.md",
+        "chapters": [
+            ("vol-9-eurusd-mastery/01-anatomy.md",                 "Chapter 1", "Anatomy of EUR/USD"),
+            ("vol-9-eurusd-mastery/02-drivers.md",                 "Chapter 2", "The Drivers of EUR/USD"),
+            ("vol-9-eurusd-mastery/03-the-two-central-banks.md",   "Chapter 3", "The Two Central Banks"),
+            ("vol-9-eurusd-mastery/04-economic-calendar.md",       "Chapter 4", "The EUR/USD Economic Calendar"),
+            ("vol-9-eurusd-mastery/05-technical-personality.md",   "Chapter 5", "EUR/USD Technical Personality"),
+            ("vol-9-eurusd-mastery/06-strategies.md",              "Chapter 6", "EUR/USD Trading Strategies"),
+            ("vol-9-eurusd-mastery/07-session-playbook.md",        "Chapter 7", "Session & Time-of-Day Playbook"),
+            ("vol-9-eurusd-mastery/08-operating-plan.md",          "Chapter 8", "Building Your EUR/USD Operating Plan"),
+            ("vol-9-eurusd-mastery/09-reference.md",               "Appendix", "EUR/USD Reference Pack"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
