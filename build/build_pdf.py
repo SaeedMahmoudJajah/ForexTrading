@@ -59,6 +59,23 @@ VOLUMES = [
             ("vol-2-top-traders/09-quotes-and-reading.md", "Appendix", "Quotes & Reading List"),
         ],
     },
+    {
+        "volume": "Volume 3 — Technical Analysis",
+        "subtitle": "Technical Analysis & Chart Mastery",
+        "output": "Forex-Trading-Playbook-Vol-3.pdf",
+        "intro": "vol-3-technical-analysis/README.md",
+        "chapters": [
+            ("vol-3-technical-analysis/01-charting-foundations.md",  "Chapter 1", "Charting Foundations"),
+            ("vol-3-technical-analysis/02-candlestick-mastery.md",   "Chapter 2", "Candlestick Mastery"),
+            ("vol-3-technical-analysis/03-market-structure.md",      "Chapter 3", "Market Structure"),
+            ("vol-3-technical-analysis/04-support-resistance.md",    "Chapter 4", "Support, Resistance & Zones"),
+            ("vol-3-technical-analysis/05-patterns.md",              "Chapter 5", "Trendlines, Channels & Chart Patterns"),
+            ("vol-3-technical-analysis/06-indicators.md",            "Chapter 6", "Indicators Deep Dive"),
+            ("vol-3-technical-analysis/07-fibonacci-confluence.md",  "Chapter 7", "Fibonacci & Confluence"),
+            ("vol-3-technical-analysis/08-building-a-trade.md",      "Chapter 8", "Building a Technical Trade"),
+            ("vol-3-technical-analysis/09-cheat-sheet.md",           "Appendix", "Technical Analysis Cheat Sheet"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
