@@ -127,6 +127,23 @@ VOLUMES = [
             ("vol-6-macro-geopolitics/09-reference.md",            "Appendix", "Macro Reference & Templates"),
         ],
     },
+    {
+        "volume": "Volume 7 — The Complete Trading Plan",
+        "subtitle": "Your Personal Operating System",
+        "output": "Forex-Trading-Playbook-Vol-7.pdf",
+        "intro": "vol-7-complete-trading-plan/README.md",
+        "chapters": [
+            ("vol-7-complete-trading-plan/01-integrated-trader.md",   "Chapter 1", "The Integrated Trader"),
+            ("vol-7-complete-trading-plan/02-trader-identity.md",     "Chapter 2", "Defining Your Trader Identity"),
+            ("vol-7-complete-trading-plan/03-edge-strategy.md",       "Chapter 3", "Your Edge & Strategy"),
+            ("vol-7-complete-trading-plan/04-risk-money-plan.md",     "Chapter 4", "Your Risk & Money Management Plan"),
+            ("vol-7-complete-trading-plan/05-operating-routine.md",   "Chapter 5", "Your Operating Routine"),
+            ("vol-7-complete-trading-plan/06-psychology-protocol.md", "Chapter 6", "Your Psychology & Discipline Protocol"),
+            ("vol-7-complete-trading-plan/07-growth-review.md",       "Chapter 7", "Your Growth & Review System"),
+            ("vol-7-complete-trading-plan/08-assembling-the-plan.md", "Chapter 8", "Assembling & Committing to Your Plan"),
+            ("vol-7-complete-trading-plan/09-master-plan-template.md","Appendix", "The Complete Trading Plan Template"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
