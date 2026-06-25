@@ -144,6 +144,23 @@ VOLUMES = [
             ("vol-7-complete-trading-plan/09-master-plan-template.md","Appendix", "The Complete Trading Plan Template"),
         ],
     },
+    {
+        "volume": "Volume 8 — Market Deep Dive",
+        "subtitle": "Currency & Pair Profiles",
+        "output": "Forex-Trading-Playbook-Vol-8.pdf",
+        "intro": "vol-8-market-deep-dive/README.md",
+        "chapters": [
+            ("vol-8-market-deep-dive/01-how-to-read-a-currency.md",        "Chapter 1", "How to Read a Currency"),
+            ("vol-8-market-deep-dive/02-us-dollar.md",                     "Chapter 2", "The US Dollar (USD)"),
+            ("vol-8-market-deep-dive/03-euro.md",                          "Chapter 3", "The Euro & EUR/USD"),
+            ("vol-8-market-deep-dive/04-pound.md",                         "Chapter 4", "The Pound & GBP/USD (\"Cable\")"),
+            ("vol-8-market-deep-dive/05-yen.md",                           "Chapter 5", "The Yen & USD/JPY"),
+            ("vol-8-market-deep-dive/06-havens-commodity-currencies.md",   "Chapter 6", "Havens & Commodity Currencies"),
+            ("vol-8-market-deep-dive/07-crosses.md",                       "Chapter 7", "The Crosses"),
+            ("vol-8-market-deep-dive/08-gold-and-exotics.md",              "Chapter 8", "Gold & the Exotics"),
+            ("vol-8-market-deep-dive/09-pair-reference-cards.md",          "Appendix", "Pair Reference Cards"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
