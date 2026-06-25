@@ -17,27 +17,46 @@ import markdown
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, "dist")
-OUT_HTML = os.path.join(DIST, "playbook.html")
-OUT_PDF = os.path.join(DIST, "Forex-Trading-Playbook-Vol-1.pdf")
 
-VOLUME = "Volume 1 — Foundations"
 TITLE = "The Forex Trading Playbook"
-SUBTITLE = "A Complete Beginner-From-Scratch Guide"
 AUTHOR = "Saeed Mahmoud Jajah"
 YEAR = "2026"
 
-# (file, Chapter label, Title shown in TOC)
-CHAPTERS = [
-    ("docs/01-foundations.md",      "Chapter 1", "Foundations — What Forex Actually Is"),
-    ("docs/02-terminology.md",      "Chapter 2", "Terminology & Complete Glossary"),
-    ("docs/03-market-mechanics.md", "Chapter 3", "Market Mechanics — How Trading Works"),
-    ("docs/04-analysis.md",         "Chapter 4", "Analysis — Deciding What to Trade"),
-    ("docs/05-risk-management.md",  "Chapter 5", "Risk Management — Staying Alive"),
-    ("docs/06-strategies.md",       "Chapter 6", "Strategies & Trading Styles"),
-    ("docs/07-psychology.md",       "Chapter 7", "Trading Psychology — The Mental Game"),
-    ("docs/08-getting-started.md",  "Chapter 8", "Getting Started — Step by Step"),
-    ("templates/trading-plan.md",   "Appendix A", "Trading Plan Template"),
-    ("templates/trading-journal.md","Appendix B", "Trading Journal Template"),
+# Each volume: metadata + its chapter list as (file path, label, TOC title).
+VOLUMES = [
+    {
+        "volume": "Volume 1 — Foundations",
+        "subtitle": "A Complete Beginner-From-Scratch Guide",
+        "output": "Forex-Trading-Playbook-Vol-1.pdf",
+        "chapters": [
+            ("docs/01-foundations.md",       "Chapter 1", "Foundations — What Forex Actually Is"),
+            ("docs/02-terminology.md",       "Chapter 2", "Terminology & Complete Glossary"),
+            ("docs/03-market-mechanics.md",  "Chapter 3", "Market Mechanics — How Trading Works"),
+            ("docs/04-analysis.md",          "Chapter 4", "Analysis — Deciding What to Trade"),
+            ("docs/05-risk-management.md",   "Chapter 5", "Risk Management — Staying Alive"),
+            ("docs/06-strategies.md",        "Chapter 6", "Strategies & Trading Styles"),
+            ("docs/07-psychology.md",        "Chapter 7", "Trading Psychology — The Mental Game"),
+            ("docs/08-getting-started.md",   "Chapter 8", "Getting Started — Step by Step"),
+            ("templates/trading-plan.md",    "Appendix A", "Trading Plan Template"),
+            ("templates/trading-journal.md", "Appendix B", "Trading Journal Template"),
+        ],
+    },
+    {
+        "volume": "Volume 2 — Secrets of the Masters",
+        "subtitle": "Secrets & Tactics of the World's Top Traders",
+        "output": "Forex-Trading-Playbook-Vol-2.pdf",
+        "chapters": [
+            ("vol-2-top-traders/01-the-legends.md",        "Chapter 1", "The Legends"),
+            ("vol-2-top-traders/02-common-threads.md",     "Chapter 2", "The Common Threads"),
+            ("vol-2-top-traders/03-risk-secrets.md",       "Chapter 3", "Risk Secrets of the Elite"),
+            ("vol-2-top-traders/04-macro-edge.md",         "Chapter 4", "The Macro Edge"),
+            ("vol-2-top-traders/05-trade-construction.md", "Chapter 5", "Trade Construction & Tactics"),
+            ("vol-2-top-traders/06-mental-edge.md",        "Chapter 6", "The Mental Edge"),
+            ("vol-2-top-traders/07-process-business.md",   "Chapter 7", "Process & The Business of Trading"),
+            ("vol-2-top-traders/08-applying-it.md",        "Chapter 8", "Applying It as a Retail Trader"),
+            ("vol-2-top-traders/09-quotes-and-reading.md", "Appendix", "Quotes & Reading List"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
@@ -63,9 +82,8 @@ def strip_nav(md: str) -> str:
 
 
 def convert(md: str) -> str:
-    # Drop internal relative links to other docs but keep the link text.
-    md = re.sub(r"\[([^\]]+)\]\((?:\.\./)?(?:docs/|templates/)?[\w./#-]+\.md[^)]*\)", r"\1", md)
-    md = re.sub(r"\[([^\]]+)\]\(\.\./README\.md\)", r"\1", md)
+    # Drop internal relative links to other docs/READMEs but keep the link text.
+    md = re.sub(r"\[([^\]]+)\]\((?:\.\./)*[\w./#-]*\.md[^)]*\)", r"\1", md)
     html = markdown.markdown(md, extensions=MD_EXT)
     return html
 
@@ -162,21 +180,22 @@ hr { border: none; border-top: 1px solid #d6dde6; margin: 14pt 0; }
 """
 
 
-def build_html() -> str:
+def build_html(vol: dict) -> str:
+    volume, subtitle, chapters = vol["volume"], vol["subtitle"], vol["chapters"]
     cover = f"""
     <div class="cover">
       <div class="chart">📈</div>
       <div class="badge">Forex Trading</div>
       <h1>{TITLE}</h1>
-      <div class="sub">{SUBTITLE}</div>
-      <div class="vol">{VOLUME}</div>
+      <div class="sub">{subtitle}</div>
+      <div class="vol">{volume}</div>
       <div class="author">{AUTHOR}</div>
       <div class="year">Edition {YEAR}</div>
     </div>
     """
 
     toc_items = []
-    for _, ch, title in CHAPTERS:
+    for _, ch, title in chapters:
         toc_items.append(
             f'<li><span><span class="ch">{ch}</span><span class="tt">{title}</span></span></li>'
         )
@@ -190,7 +209,7 @@ def build_html() -> str:
     )
 
     body_parts = []
-    for path, ch, title in CHAPTERS:
+    for path, ch, title in chapters:
         with open(os.path.join(ROOT, path), encoding="utf-8") as f:
             md = f.read()
         md = strip_nav(md)
@@ -211,7 +230,7 @@ def build_html() -> str:
     )
 
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
-<title>{TITLE} — {VOLUME}</title><style>{CSS}</style></head>
+<title>{TITLE} — {volume}</title><style>{CSS}</style></head>
 <body>{cover}{toc}{''.join(body_parts)}{disclaimer}</body></html>"""
 
 
@@ -227,24 +246,34 @@ def find_chrome() -> str:
     sys.exit("No Chrome/Chromium/Edge found for PDF rendering.")
 
 
-def main():
-    os.makedirs(DIST, exist_ok=True)
-    html = build_html()
-    with open(OUT_HTML, "w", encoding="utf-8") as f:
-        f.write(html)
-    chrome = find_chrome()
+def build_volume(vol: dict, chrome: str):
+    out_pdf = os.path.join(DIST, vol["output"])
+    out_html = os.path.join(DIST, vol["output"].replace(".pdf", ".html"))
+    with open(out_html, "w", encoding="utf-8") as f:
+        f.write(build_html(vol))
     subprocess.run(
         [
             chrome, "--headless", "--disable-gpu", "--no-pdf-header-footer",
-            f"--print-to-pdf={OUT_PDF}", "--no-margins",
-            "file://" + OUT_HTML,
+            f"--print-to-pdf={out_pdf}", "--no-margins",
+            "file://" + out_html,
         ],
         check=True,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
-    size = os.path.getsize(OUT_PDF) / 1024
-    print(f"✅ Built {OUT_PDF} ({size:.0f} KB)")
+    size = os.path.getsize(out_pdf) / 1024
+    print(f"✅ Built {out_pdf} ({size:.0f} KB)")
+
+
+def main():
+    os.makedirs(DIST, exist_ok=True)
+    chrome = find_chrome()
+    # Optional arg: a substring to build only matching volume(s), e.g. "Vol-2".
+    want = sys.argv[1] if len(sys.argv) > 1 else None
+    for vol in VOLUMES:
+        if want and want.lower() not in vol["output"].lower():
+            continue
+        build_volume(vol, chrome)
 
 
 if __name__ == "__main__":

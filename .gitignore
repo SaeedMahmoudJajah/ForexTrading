@@ -1,5 +1,5 @@
-# Intermediate build artifact (the PDF in dist/ is committed, the HTML is not)
-dist/playbook.html
+# Intermediate build artifacts (the PDFs in dist/ are committed, the HTML is not)
+dist/*.html
 
 # OS / editor noise
 .DS_Store
