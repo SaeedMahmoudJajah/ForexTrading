@@ -28,6 +28,7 @@ VOLUMES = [
         "volume": "Volume 1 — Foundations",
         "subtitle": "A Complete Beginner-From-Scratch Guide",
         "output": "Forex-Trading-Playbook-Vol-1.pdf",
+        "intro": "README.md",
         "chapters": [
             ("docs/01-foundations.md",       "Chapter 1", "Foundations — What Forex Actually Is"),
             ("docs/02-terminology.md",       "Chapter 2", "Terminology & Complete Glossary"),
@@ -45,6 +46,7 @@ VOLUMES = [
         "volume": "Volume 2 — Secrets of the Masters",
         "subtitle": "Secrets & Tactics of the World's Top Traders",
         "output": "Forex-Trading-Playbook-Vol-2.pdf",
+        "intro": "vol-2-top-traders/README.md",
         "chapters": [
             ("vol-2-top-traders/01-the-legends.md",        "Chapter 1", "The Legends"),
             ("vol-2-top-traders/02-common-threads.md",     "Chapter 2", "The Common Threads"),
@@ -79,6 +81,43 @@ def strip_nav(md: str) -> str:
             continue
         out.append(ln)
     return "\n".join(out)
+
+
+# Headings whose entire section is dropped from the intro (handled elsewhere in the PDF).
+_SKIP_SECTIONS = ("contents", "how to use this playbook", "license & disclaimer")
+# Lines dropped from the intro because they are repo/build meta, not book content.
+_SKIP_LINE_MARKERS = (
+    "download the book", "➡️", "regenerate", "build/build_pdf",
+    "📂 volume 2", "forex-trading-playbook-vol", "educational disclaimer.",
+)
+
+
+def clean_intro(md: str) -> str:
+    """Turn a volume README into self-contained book front matter.
+
+    Drops the leading H1, nav lines, the duplicate Contents/TOC section, license
+    boilerplate, and repo-only meta (download links, build commands) so the
+    introduction reads as part of the book rather than a GitHub landing page.
+    """
+    md = strip_nav(md)
+    lines = md.splitlines()
+    out = []
+    skipping = False
+    for ln in lines:
+        s = ln.strip()
+        if s.startswith("#"):
+            heading = s.lstrip("#").strip().lower()
+            skipping = any(heading.startswith(h) for h in _SKIP_SECTIONS)
+            if skipping:
+                continue
+        if skipping:
+            continue
+        if any(m in s.lower() for m in _SKIP_LINE_MARKERS):
+            continue
+        out.append(ln)
+    # Collapse any runs of blank lines left by removals.
+    text = re.sub(r"\n{3,}", "\n\n", "\n".join(out)).strip()
+    return text
 
 
 def convert(md: str) -> str:
@@ -195,6 +234,11 @@ def build_html(vol: dict) -> str:
     """
 
     toc_items = []
+    if vol.get("intro"):
+        toc_items.append(
+            '<li><span><span class="ch">Front Matter</span>'
+            '<span class="tt">Introduction</span></span></li>'
+        )
     for _, ch, title in chapters:
         toc_items.append(
             f'<li><span><span class="ch">{ch}</span><span class="tt">{title}</span></span></li>'
@@ -209,6 +253,15 @@ def build_html(vol: dict) -> str:
     )
 
     body_parts = []
+    if vol.get("intro"):
+        with open(os.path.join(ROOT, vol["intro"]), encoding="utf-8") as f:
+            intro_md = f.read()
+        intro_html = convert(clean_intro(intro_md))
+        body_parts.append(
+            '<section class="chapter"><div class="chapter-head">'
+            '<div class="kicker">Front Matter</div></div>'
+            f"<h2>Introduction</h2>{intro_html}</section>"
+        )
     for path, ch, title in chapters:
         with open(os.path.join(ROOT, path), encoding="utf-8") as f:
             md = f.read()
