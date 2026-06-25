@@ -76,6 +76,23 @@ VOLUMES = [
             ("vol-3-technical-analysis/09-cheat-sheet.md",           "Appendix", "Technical Analysis Cheat Sheet"),
         ],
     },
+    {
+        "volume": "Volume 4 — Strategy & Systems",
+        "subtitle": "Strategy Development, Backtesting & Journaling Systems",
+        "output": "Forex-Trading-Playbook-Vol-4.pdf",
+        "intro": "vol-4-strategy-systems/README.md",
+        "chapters": [
+            ("vol-4-strategy-systems/01-trading-system.md",       "Chapter 1", "From Knowledge to a Trading System"),
+            ("vol-4-strategy-systems/02-designing-a-strategy.md", "Chapter 2", "Designing a Strategy"),
+            ("vol-4-strategy-systems/03-edge-expectancy.md",      "Chapter 3", "Edge, Expectancy & the Math"),
+            ("vol-4-strategy-systems/04-backtesting.md",          "Chapter 4", "Backtesting Properly"),
+            ("vol-4-strategy-systems/05-forward-testing.md",      "Chapter 5", "Forward Testing: Demo to Live"),
+            ("vol-4-strategy-systems/06-journaling-system.md",    "Chapter 6", "The Journaling System"),
+            ("vol-4-strategy-systems/07-metrics-analytics.md",    "Chapter 7", "Performance Metrics & Analytics"),
+            ("vol-4-strategy-systems/08-optimizing-sizing.md",    "Chapter 8", "Optimizing, Iterating & Position Sizing"),
+            ("vol-4-strategy-systems/09-templates.md",            "Appendix", "Templates & Systems Pack"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
