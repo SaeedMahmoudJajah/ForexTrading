@@ -93,6 +93,23 @@ VOLUMES = [
             ("vol-4-strategy-systems/09-templates.md",            "Appendix", "Templates & Systems Pack"),
         ],
     },
+    {
+        "volume": "Volume 5 — The Prop Firm Path",
+        "subtitle": "Funded Trading as a Full-Time Career",
+        "output": "Forex-Trading-Playbook-Vol-5.pdf",
+        "intro": "vol-5-prop-firm-path/README.md",
+        "chapters": [
+            ("vol-5-prop-firm-path/01-the-prop-model.md",      "Chapter 1", "The Prop Firm Model"),
+            ("vol-5-prop-firm-path/02-choosing-a-firm.md",     "Chapter 2", "Choosing a Legitimate Firm"),
+            ("vol-5-prop-firm-path/03-decoding-the-rules.md",  "Chapter 3", "Decoding the Rules"),
+            ("vol-5-prop-firm-path/04-prop-trading-system.md", "Chapter 4", "Building Your Prop Trading System"),
+            ("vol-5-prop-firm-path/05-evaluation-playbook.md", "Chapter 5", "The Evaluation Playbook"),
+            ("vol-5-prop-firm-path/06-discipline-routine.md",  "Chapter 6", "Discipline, Routine & The Operation"),
+            ("vol-5-prop-firm-path/07-psychology-funded.md",   "Chapter 7", "The Psychology of Funded Trading"),
+            ("vol-5-prop-firm-path/08-full-time-career.md",    "Chapter 8", "The Full-Time Career Plan"),
+            ("vol-5-prop-firm-path/09-checklists.md",          "Appendix", "Checklists & Templates"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
