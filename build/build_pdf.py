@@ -178,6 +178,23 @@ VOLUMES = [
             ("vol-9-eurusd-mastery/09-reference.md",               "Appendix", "EUR/USD Reference Pack"),
         ],
     },
+    {
+        "volume": "Volume 10 — The Top 1% Daily Routine",
+        "subtitle": "The Elite Trader's Operating Rhythm",
+        "output": "Forex-Trading-Playbook-Vol-10.pdf",
+        "intro": "vol-10-daily-routine/README.md",
+        "chapters": [
+            ("vol-10-daily-routine/01-why-routine.md",                 "Chapter 1", "Why Routine Makes the Top 1%"),
+            ("vol-10-daily-routine/02-foundations-sleep-body-mind.md", "Chapter 2", "Foundations: Sleep, Body & Mind"),
+            ("vol-10-daily-routine/03-pre-market-routine.md",          "Chapter 3", "The Pre-Market Routine"),
+            ("vol-10-daily-routine/04-trading-session-routine.md",     "Chapter 4", "The Trading Session Routine"),
+            ("vol-10-daily-routine/05-post-market-routine.md",         "Chapter 5", "The Post-Market Routine"),
+            ("vol-10-daily-routine/06-non-trading-hours.md",           "Chapter 6", "The Non-Trading Hours"),
+            ("vol-10-daily-routine/07-weekly-monthly-rhythm.md",       "Chapter 7", "The Weekly & Monthly Rhythm"),
+            ("vol-10-daily-routine/08-building-sustaining.md",         "Chapter 8", "Building & Sustaining the Routine"),
+            ("vol-10-daily-routine/09-routine-templates.md",           "Appendix", "Routine Templates & Schedules"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
