@@ -110,6 +110,23 @@ VOLUMES = [
             ("vol-5-prop-firm-path/09-checklists.md",          "Appendix", "Checklists & Templates"),
         ],
     },
+    {
+        "volume": "Volume 6 — Macro & Geopolitics",
+        "subtitle": "Fundamental Analysis, Global Indicators & Geopolitics",
+        "output": "Forex-Trading-Playbook-Vol-6.pdf",
+        "intro": "vol-6-macro-geopolitics/README.md",
+        "chapters": [
+            ("vol-6-macro-geopolitics/01-macro-mindset.md",        "Chapter 1", "The Macro Mindset"),
+            ("vol-6-macro-geopolitics/02-central-banks.md",        "Chapter 2", "Central Banks & Interest Rates"),
+            ("vol-6-macro-geopolitics/03-economic-indicators.md",  "Chapter 3", "The Economic Indicators That Move Currencies"),
+            ("vol-6-macro-geopolitics/04-expectations-game.md",    "Chapter 4", "The Expectations Game"),
+            ("vol-6-macro-geopolitics/05-geopolitics-risk.md",     "Chapter 5", "Geopolitics & Risk Sentiment"),
+            ("vol-6-macro-geopolitics/06-intermarket.md",          "Chapter 6", "Intermarket Analysis"),
+            ("vol-6-macro-geopolitics/07-research-process.md",     "Chapter 7", "Building Your Macro Research Process"),
+            ("vol-6-macro-geopolitics/08-trading-fundamentals.md", "Chapter 8", "Trading the Fundamentals"),
+            ("vol-6-macro-geopolitics/09-reference.md",            "Appendix", "Macro Reference & Templates"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
