@@ -195,6 +195,23 @@ VOLUMES = [
             ("vol-10-daily-routine/09-routine-templates.md",           "Appendix", "Routine Templates & Schedules"),
         ],
     },
+    {
+        "volume": "Volume 11 — AI Agents for the Forex Trader",
+        "subtitle": "Building Your AI-Powered Support System",
+        "output": "Forex-Trading-Playbook-Vol-11.pdf",
+        "intro": "vol-11-ai-agents/README.md",
+        "chapters": [
+            ("vol-11-ai-agents/01-ai-augmented-trader.md",                "Chapter 1", "The AI-Augmented Trader"),
+            ("vol-11-ai-agents/02-agent-architecture.md",                 "Chapter 2", "The Agent Architecture"),
+            ("vol-11-ai-agents/03-pre-market-briefing-agent.md",          "Chapter 3", "The Pre-Market Briefing Agent"),
+            ("vol-11-ai-agents/04-trade-plan-gatekeeper-agent.md",        "Chapter 4", "The Trade-Plan Gatekeeper Agent"),
+            ("vol-11-ai-agents/05-journal-analytics-agent.md",            "Chapter 5", "The Journal & Analytics Agent"),
+            ("vol-11-ai-agents/06-macro-research-agent.md",               "Chapter 6", "The Macro & News Research Agent"),
+            ("vol-11-ai-agents/07-review-coaching-agent.md",              "Chapter 7", "The Review & Coaching Agent"),
+            ("vol-11-ai-agents/08-building-orchestrating-safeguarding.md","Chapter 8", "Building, Orchestrating & Safeguarding"),
+            ("vol-11-ai-agents/09-agent-prompt-pack.md",                  "Appendix", "Agent Prompt Pack & Blueprints"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
