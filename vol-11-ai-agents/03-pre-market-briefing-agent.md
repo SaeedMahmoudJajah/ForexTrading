@@ -103,7 +103,13 @@ The agent compresses the *gathering*; you keep the *thinking*. You still produce
 
 ---
 
-## 3.6 Chapter summary
+## 3.6 A working build of this agent
+
+This volume ships a runnable version of the Briefing agent in [`agents/pre-market-briefing.py`](../agents/pre_market_briefing.py) (see [`agents/README.md`](../agents/README.md)). You fill in a short daily inputs file (calendar, overnight, regime, levels), run one command, and get this exact 7-section briefing — either assembled locally (no API key, plus a ready-to-paste prompt) or synthesised by Claude (`--ai`). It enforces every rule above: it organises only what you provide, never predicts, and ends with the bias-forming questions.
+
+---
+
+## 3.7 Chapter summary
 
 ```
 • The Briefing agent automates the GATHERING of pre-market prep (Vol 10, Ch. 3) into a

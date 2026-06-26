@@ -1,0 +1,11 @@
+{
+  "pairs": ["EUR/USD", "GBP/USD", "USD/JPY"],
+  "session": "London–NY overlap",
+  "account_currency": "USD",
+  "themes": [
+    "Central-bank rate-cut timing (Fed vs ECB)",
+    "Risk sentiment driven by equities & yields"
+  ],
+  "model": "claude-opus-4-8",
+  "_notes": "Copy this file to config.json and edit it. 'model' is only used with --ai. See Vol. 11, Ch. 3 & 8."
+}

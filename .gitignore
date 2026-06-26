@@ -1,6 +1,12 @@
 # Intermediate build artifacts (the PDFs in dist/ are committed, the HTML is not)
 dist/*.html
 
+# Agents: keep personal config, daily inputs, and generated briefings private.
+# The .example.* files and the script ARE committed.
+agents/config.json
+agents/inputs/briefing-inputs.md
+agents/briefings/
+
 # OS / editor noise
 .DS_Store
 *.swp
