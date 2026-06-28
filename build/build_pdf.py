@@ -212,6 +212,23 @@ VOLUMES = [
             ("vol-11-ai-agents/09-agent-prompt-pack.md",                  "Appendix", "Agent Prompt Pack & Blueprints"),
         ],
     },
+    {
+        "volume": "Volume 12 — The 10-Year Tycoon Roadmap",
+        "subtitle": "From Zero to a Trading Enterprise",
+        "output": "Forex-Trading-Playbook-Vol-12.pdf",
+        "intro": "vol-12-tycoon-roadmap/README.md",
+        "chapters": [
+            ("vol-12-tycoon-roadmap/01-what-tycoon-means.md",        "Chapter 1", "What \"Tycoon\" Really Means"),
+            ("vol-12-tycoon-roadmap/02-the-ten-year-map.md",         "Chapter 2", "The 10-Year Map"),
+            ("vol-12-tycoon-roadmap/03-phase-1-apprentice.md",       "Chapter 3", "Phase 1 — The Apprentice (Years 1–2)"),
+            ("vol-12-tycoon-roadmap/04-phase-2-professional.md",     "Chapter 4", "Phase 2 — The Professional (Years 2–4)"),
+            ("vol-12-tycoon-roadmap/05-phase-3-capital-allocator.md","Chapter 5", "Phase 3 — The Capital Allocator (Years 4–7)"),
+            ("vol-12-tycoon-roadmap/06-the-wealth-engine.md",        "Chapter 6", "The Wealth Engine"),
+            ("vol-12-tycoon-roadmap/07-the-enterprise.md",           "Chapter 7", "The Enterprise (Years 7–10)"),
+            ("vol-12-tycoon-roadmap/08-risks-reality-longevity.md",  "Chapter 8", "Risks, Reality & Longevity"),
+            ("vol-12-tycoon-roadmap/09-tycoon-plan-template.md",     "Appendix", "The 10-Year Tycoon Plan & Milestones"),
+        ],
+    },
 ]
 
 MD_EXT = ["tables", "fenced_code", "sane_lists", "nl2br", "attr_list"]
